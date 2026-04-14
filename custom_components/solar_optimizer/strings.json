@@ -1,0 +1,73 @@
+{
+  "config": {
+    "step": {
+      "forecast": {
+        "title": "Solar Forecast (forecast.solar)",
+        "description": "Enter your solar panel details to retrieve production forecasts.",
+        "data": {
+          "latitude": "Latitude",
+          "longitude": "Longitude",
+          "declination": "Panel tilt (°, 0=flat, 90=vertical)",
+          "azimuth": "Panel azimuth (°, 0=N, 90=E, 180=S, 270=W)",
+          "kwp": "Installed capacity (kWp)",
+          "api_key": "API key (optional — leave blank for free tier)"
+        }
+      },
+      "sensors": {
+        "title": "Sensor Entities",
+        "description": "Select the entities that provide live readings.",
+        "data": {
+          "solar_production_entity": "Solar production sensor (W)",
+          "home_consumption_entity": "Home consumption sensor (W)",
+          "battery_soc_entity": "Battery state of charge sensor (%)",
+          "hot_water_temp_entity": "Hot water thermal safety sensor (°C)",
+          "hot_water_power_entity": "Hot water heater power sensor (W)",
+          "car_plugged_in_entity": "Car plugged-in entity"
+        }
+      },
+      "switches": {
+        "title": "Switch Entities",
+        "description": "Select the switches that control your loads.",
+        "data": {
+          "hot_water_switch_entity": "Hot water heater switch",
+          "car_charger_switch_entity": "Car charger switch"
+        }
+      },
+      "thresholds": {
+        "title": "Optimization Thresholds",
+        "description": "Configure when loads are activated. These can be changed later.",
+        "data": {
+          "hot_water_daily_target_kwh": "Hot water daily energy target (kWh)",
+          "thermal_safety_max_celsius": "Hot water thermal safety cutoff (°C)",
+          "hot_water_min_surplus_w": "Minimum surplus to activate hot water (W)",
+          "car_min_surplus_w": "Minimum surplus to activate car charging (W)",
+          "battery_min_soc": "Battery minimum SOC (%)",
+          "battery_max_soc": "Battery maximum SOC (%)",
+          "forecast_preheat_threshold_kwh": "Forecast threshold for pre-heating (kWh)",
+          "preheat_deadline": "Pre-heat deadline (HH:MM)"
+        }
+      }
+    },
+    "error": {
+      "invalid_forecast_params": "Invalid panel parameters. Check latitude, longitude, tilt, and azimuth.",
+      "unknown": "Unexpected error. Check logs for details."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Update Thresholds",
+        "data": {
+          "hot_water_daily_target_kwh": "Hot water daily energy target (kWh)",
+          "thermal_safety_max_celsius": "Hot water thermal safety cutoff (°C)",
+          "hot_water_min_surplus_w": "Minimum surplus to activate hot water (W)",
+          "car_min_surplus_w": "Minimum surplus to activate car charging (W)",
+          "battery_min_soc": "Battery minimum SOC (%)",
+          "battery_max_soc": "Battery maximum SOC (%)",
+          "forecast_preheat_threshold_kwh": "Forecast threshold for pre-heating (kWh)",
+          "preheat_deadline": "Pre-heat deadline (HH:MM)"
+        }
+      }
+    }
+  }
+}
