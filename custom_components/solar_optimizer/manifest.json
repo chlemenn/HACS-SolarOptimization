@@ -1,8 +1,8 @@
 {
   "domain": "solar_optimizer",
   "name": "Solar Optimizer",
-  "documentation": "https://github.com/username/solar_optimizer",
-  "codeowners": [],
+  "documentation": "https://github.com/chlemenn/HACS-SolarOptimization",
+  "codeowners": ["@chlemenn"],
   "requirements": [],
   "version": "1.0.0",
   "iot_class": "cloud_polling",
